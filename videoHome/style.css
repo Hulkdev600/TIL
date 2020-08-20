@@ -46,7 +46,7 @@ header .logo {
   position: relative;
   width: 60px;
   height: 60px;
-  background: url(../img/menu.png);
+  background: url();
   background-repeat: no-repeat;
   background-size: 35px;
   background-position: center;
@@ -55,7 +55,7 @@ header .logo {
   z-index: 10;
 }
 .toggle.active {
-  background: url(../img/close.png);
+  background: url();
   background-repeat: no-repeat;
   background-size: 30px;
   background-position: center;
