@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/3b645a7888.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fab fa-amilia"></i>
+            <a href="">Jeong Hun</a>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Picture</a></li>
+            <li><a href="#">Contact Me</a></li>
+        </ul>
+
+            <ul class="sci">
+                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+
+            <a href="#" class="toggleBtn">
+                <i class="fas fa-bars"></i>
+            </a>
+                
+    </nav>
+    <script>
+        let toggleBtn = document.querySelector('.toggleBtn');
+        let menu = document.querySelector('.menu');
+        let sci = document.querySelector('.sci');
+
+        toggleBtn.addEventListener('click',()=>{
+            menu.classList.toggle('active')
+            sci.classList.toggle('active')
+        })
+    </script>
+</body>
+</html>
