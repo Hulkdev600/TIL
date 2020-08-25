@@ -1,0 +1,28 @@
+.scale .scale_box img {
+  width: 100%;
+}
+.scale_box {
+  border: 2px solid red;
+  width: 300px;
+  transition-duration: 2s;
+}
+.scale_box:hover {
+  transform: scale(1.5);
+  transition-duration: 2s;
+}
+
+.page {
+  width: 500px;
+  margin: 20px auto;
+}
+.box {
+  border: 2px solid red;
+  width: 200px;
+  height: 200px;
+  transition-duration: 2s;
+  transform: scale(1);
+}
+
+.box:hover {
+  transform: scale(0.5);
+}
