@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="테스트">
+    <meta name="author" content="테스트">
+    <title>제목테스트</title>
+    <!--
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo-container">
+          <img src="./img/DB_logo/DB_logo.png" alt="" />
+        </div>
+        <div class="product-name">
+          <div class="vertical-container">
+            <span class="dajoong1"><strong>테스트</strong> 가입신청</span> 
+          </div>
+        </div>
+      </header>
+
+      <!-- <div class="container"> -->
+      <section class="section-area section-area1">
+        
+        <div class="inner-container">
+          <div class="check-container">
+            <div class="product-information">
+              <div class="product-information-inner">
+                <span class="SME-text"><strong>프로토타입</strong> 안내</span> 
+              </div>
+            </div>
+            <div class="informaion_agree">
+              <div class="section-title">개인정보 수집 및 이용동의</div>
+              <div class="box">
+                <img class="check" src="./img/check/unchecked.png" id="firstChk">
+                <span class="agree-title">개인(신용)정보의 수집, 이용에 관한 고찰</span>
+                <span class="show-text" data-toggle="modal" data-target="#detailModal1">보기</span>
+              </div>
+              <div class="box">
+                <img class="check" src="./img/check/unchecked.png" id="secondChk" />
+                <span class="agree-title">개인(신용)정보의 조회에 관한 사항 (필수)</span>
+                <span class="show-text" data-toggle="modal" data-target="#detailModal2">보기</span>
+              </div>
+              <div class="box">
+                <img class="check" src="./img/check/unchecked.png" id="thirdChk" />
+                <span class="agree-title">개인(신용)정보의 제공에 관한 사항 (필수)</span>
+                <span class="show-text" data-toggle="modal" data-target="#detailModal3">보기</span>
+              </div>
+              <div class="box">
+                <img class="check" src="./img/check/unchecked.png" id="fourthChk" />
+                  <span class="agree-title">민감정보 및 고유식별정보의 처리에 관한 사항(필수)</span>
+                  <span class="show-text" data-toggle="modal" data-target="#detailModal4">보기</span>
+                  <br>
+                  <span class="underText">· 주민등록번호, 외국인등록번호 처리</span>
+                <br>
+              </div>
+              <div class="box">
+                <img class="check" src="./img/check/unchecked.png" id="fifthChk"/>
+                <span class="agree-title">마케팅 활용 제공 동의</span>
+                <span class="show-text" data-toggle="modal" data-target="#detailModal5">보기</span>
+                <br>
+                <span class="underText">· 자동차보험 만기안내</span>
+              </div>
+
+              <ul class="subtext">
+                <li>
+                  개인정보 보호법에 의거하여 가입설계를 위한 개인(신용)정보처리
+                  동의서를 동의한 경우에만 당사의 보험계약 가입 등을 하실 수
+                  있습니다.
+                </li>
+                <li>
+                  개인용자동차 보험이 유효한 상태여야 본 시간제 보험의 보상이
+                  가능합니다. 만기일 이전에 갱신 누락예방을 위한 사전안내를 드릴
+                  수 있습니다. (마케팅동의 관련)
+                </li>
+              </ul>
+
+              <div class="box">
+                <img class="check" src="./img/check/unchecked.png" id="allChk" />
+                <span class="agree-title">위 개인(신용)정보에 대하여 모두 동의합니다</span>
+                <!-- <span class="show-text">보기</span> -->
+              </div>
+              <div class="checkText">
+                "개인정보 수집 및 이용에 동의하신다면
+                <span class="red">필수항목을 모두 체크</span>해주시기 바랍니다."
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-area section-area2">
+        <div class="inner-container">
+          <div class="section-title">상품정보</div>
+          <div class="product-area">
+            <div class="product-area1">
+              <div class="form productNumber-area">
+                <div class="information-title">일련번호</div>
+                <div class="information-write">
+                    <div class="number-container">
+                      <span class="MU">MU</span>
+                      <input class="productNum productNum1" type="text" id='serial1'/>
+                      -
+                      <input class="productNum productNum2" type="text" id='serial2'/>
+                      -
+                      <input class="productNum productNum3" type="text" id='serial3'/>
+                    </div>
+                    
+                </div>
+                
+              </div>
+              <!-- <p>
+                "잘못된 일련번호 정보를 입력하셨습니다. 확인 후, 다시 입력하시기
+                바랍니다."
+              </p> -->
+            </div>
+            <div class="product-area2">
+              <select class="choose information" id="a9b" onchange='seleA9b()'>
+                <option value="">업종선택</option>
+                <option value="1">전화방업</option>
+                <option value="2">비디오감상실</option>
+                <option value="3">비디오소극장</option>
+                <option value="4">수면방업</option>
+                <option value="5">산후조리원</option>
+                <option value="6">스크린골프장</option>
+                <option value="7">노래방</option>
+                <option value="8">유흥주점</option>
+                <option value="9">콜라텍</option>
+                <option value="10">안마시술소</option>
+                <option value="11">영화상영관</option>
+                <option value="12">학원</option>
+                <option value="13">목욕탕(찜질방)</option>
+                <option value="14">고시원</option>
+                <option value="15">일반음식점</option>
+                <option value="16">휴게음식점</option>
+                <option value="17">제과점</option>
+                <option value="18">인터넷컴퓨터게임시설제공업(PC방)</option>
+                <option value="19">게임제공업</option>
+                <option value="20">복합유통제공업</option>
+                <option value="21">실내권총사격장</option>
+              </select>
+              <div class="job-information" id="gi"></div>
+              <div class="job-information" id="pr"></div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-area section-area3">
+        <div class="inner-container">
+          <div class="section-title">신청정보</div>
+          <p class="message">*표기된 항목은 필수항목으로 누락없이 입력하시기 바랍니다.</p>
+          <div class="applicant-area applicant-area1">
+            <div class="block left-block">
+              <div class="form name-area">
+                <div class="information-title">성 명<span class="estarc">*</span></div>
+                <input id="damdangja" type="text" />
+              </div>
+              <div class="form email-area">
+                <div class="information-title">이메일</div>
+                <input id="email" type="text" />
+              </div>
+            </div>
+            <div class="block right-block">
+              <div class="form SSN-area">
+                <div class="information-title">주민등록번호<span class="estarc">*</span></div>
+                <input id="jumin" type="text" placeholder=" '-'없이 숫자만"/>
+              </div>
+              <div class="form cellPhone-area">
+                <div class="information-title">신청자 연락처<span class="estarc">*</span></div>
+                <input id="hphone1" type="text" placeholder=" '-'없이 숫자만"/>
+              </div>
+            </div>
+          </div>
+          <div class="applicant-area applicant-area2">
+            <div class="block left-block">
+              <div class="form mutual-area">
+                <div class="information-title">보험시작일<span class="estarc">*</span></div>
+                <input id="sigi" type="text" />
+              </div>
+              <div class="form bussinessName-area">
+                <div class="information-title">사업자명<span class="estarc">*</span></div>
+                <input id="company" type="text" />
+              </div>
+            </div>
+            <div class="block right-block">
+              <div class="form bussinessNumber-area">
+                <div class="information-title">사업자번호<span class="estarc">*</span></div>
+                <input id="school2" type="text" placeholder=" '-'없이 숫자 10자리"/>
+              </div>
+              <div class="form bussinessPhone-area">
+                <div class="information-title">사업장 연락처<span class="estarc">*</span></div>
+                <input id="hphone2" type="text" placeholder=" '-'없이 숫자만"/>
+              </div>
+            </div>
+          </div>
+          <div class="applicant-area applicant-area3">
+            <div class="form businessAddress-area">
+              <div class="information-title">사업장 소재지<span class="estarc">*</span></div>
+              <!--<div class="information-write">-->
+                <input
+                id="juso"
+                type="text"
+                placeholder=" 사업장의 주소를 정확하게 입력하시기 바랍니다."/>
+                <!-- <button type="button" class="btn btn-success">주소찾기</button> -->
+              <!--</div>--> 
+            </div>
+            <div class="form customerOpinion-area">
+              <div class="information-title form-group">문의 · 전달사항</div>
+              <!--<div class="information-write">-->
+                <textarea id="message" rows="3" placeholder="문의 · 전달"></textarea>
+              <!--</div>-->
+            </div>
+            <div class="btn-area">
+              <div class="btn-container">
+                <button id="onSubmit" type="button" class="btn btn-success applicant-btn" onClick='submit()'>가입신청</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="section-area">
+        <div class="inner-container">
+          <div class="section-title">본인인증</div>
+          <p class="message">*인증 받으실 전화번호를 (-)없이 입력하시기 바랍니다.</p>
+          <div class="certi-area">
+            <div class="certiBlock">
+              <div class="form certiCellPhone-area">
+                <div class="information-title">전화번호 입력</div>
+                <input type="text" />
+                <button type="button" class="btn btn-success">
+                  인증번호 요청
+                </button>
+              </div>
+  
+              <div class="form certiNumber-area">
+                <div class="information-title">인증번호 입력</div>
+                <input type="text" />
+                <button id="confirm-btn" type="button" class="btn btn-success">확인</button>
+              </div>
+            </div>
+            <div class="button-area">
+              <button id="onSubmit" type="button" class="btn btn-success applicant-btn">가입신청</button>
+            </div>
+          </div>
+          
+        </div>
+      </section> -->
+      <section class="section-area section-area4">
+        <div class="inner-container">
+          <div class="hulk-container">
+            <p>네이버 <span class="dajoong"><strong>프로토타입</strong> </span>안내입니다.</p>
+            <div class="line-container">
+              <div class="line-text">
+                LINE messenger를 통해<br>
+              테스트 문의하기
+              </div>
+              <img src="./img/line_logo/line_logo.png" alt="">
+            </div>
+            <div class="hulk-information-container">
+              <div class="hulk-information1">
+                작성 : hulkDev600<br />
+                대리점번호: 000-0000-0000<br />
+                대표자:HulkDev600<br />
+                사업자등록번호:128-00-00000
+              </div>
+              <div class="hulk-information2">
+                <br>
+                주소: someWhere<br>
+                전화: 1234-5678<br>
+                팩스: 02-1234-5678<br>
+              </div>
+              <br>
+              <br>
+              <p>
+               의 사전 서면동의 없이 서비스 일체의 정보 콘텐츠상 및 UI등을 상업적 목적으로 전제하여 전송및 스크래핑등 무단 사용할 수 없습니다.  
+              </p>
+            </div>
+            
+            
+          </div>
+          
+        </div>
+      </section>
+      <footer class="footer-container">
+        <div class="footer-inner">
+          © 2019 Copyright By HulkDev600 All Rights Reserved
+        </div>
+      </footer>
+      <!-- </div> -->
+    </div>
+
+
+    
+
+
+
+
+<!-- detailModal1 -->
+<div class="modal fade" id="detailModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">개인(신용)정보의 수집, 이용에 관한 사항</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <div  >
+
+            <h4>개인(신용)정보의 수집, 이용에 관한 사항</h4>
+            <p>당사 및 당사 업무수탁자는 「개인정보보호법」 및 「신용정보의 이용 및 보호에 관한 법률」에 따라 귀하의 개인(신용)정보를 다음과 같이 수집ㆍ이용하고자 합니다. 
+
+            </p>
+            <h6>1. 개인(신용)정보의 수집 · 이용 목적 </h6>
+            <p>
+              º 보험계약 상담, 보험계약 인수여부 결정을 위한 판단, 재무설계서비스, 실손의료보험계약, 기타손해보험계약 등 ‘실제 발생하는 손해만을 보상하는 실손형 보험’의 중복가입 확인을 위한 보험가입내역 조회
+            </p>
+            <h6>2. 보험회사가 수집 · 이용할 개인(신용)정보의 내용</h6>
+            <p>
+              - 개인식별정보(성명, 주민등록번호, 외국인등록번호, 주소, 직업, 전화번호, 전자우편주소, 외국인 체류자격/코드)<br>
+              - 질병 및 상해에 관한 정보(자동차보험 제외)<br>
+              - 당사, 신용정보집중기관(한국신용정보원) 및 보험요율산출기관에서 수집ㆍ관리하는 보험계약정보, 보험금 지급관련 정보(사고정보 포함) 및 교통법규위반 개인정보, 손해보험협회에서 수집ㆍ관리하는 전문보험계약자(보험설계사ㆍ보험대리점ㆍ보험중개사 등)의 정보<br>
+              - 업무 수탁자라 함은 당사의 개인(신용)정보처리 업무를 위탁받아 처리하는 의료자문업체, 자문의, 모집인, 계약적부 조사 회사 등을 의미합니다.<br>
+            </p>
+            <h6>3. 개인(신용)정보의 보유 · 이용 기간</h6>
+            <p>
+              - 이용기간 : 수집·이용 동의일로부터 1년까지<br>
+              - 보유기간 : 수집·이용 동의일로부터 1년까지
+              
+            </p>
+            <p> *보험 가입을 위해, 보험계약 설계를 진행해 주셔야 운행이 가능하오니, 개인정보 수집, 이용에관한 사항에 동의해 주셔야합니다.</p>
+            <p> *보험 설계 동의하지 않으실 경우, 운행이 불가하며, 한번 심사가 완료된 이후 담보의 변경, 차량의 변경을 원하실 경우는 가입동의, 심사부터 다시 진행하셔야 합니다.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- detailModal2 -->
+<div class="modal fade" id="detailModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">개인(신용)정보의 조회에 관한 사항</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div >
+
+            <h4>개인(신용)정보의 조회에 관한 사항</h4>
+            <p>
+              당사 및 당사 업무수탁자는 「개인정보보호법」 및 「신용정보의 이용 및 보호에 관한 법률」에 따라 귀하의 개인(신용)정보를 다음과 같이 조회하고자 합니다
+
+            </p>
+          <h6>1. 개인(신용)정보의 조회 목적</h6>
+          <p>
+            º 보험계약 상담, 보험계약 인수여부 결정을 위한 판단, 실손의료보험계약, 기타손해보험계약 등 ‘실제 발생하는 손해만을 보상하는 실손형 보험’의 중복가입 확인
+          </p>
+          
+          <h6>2. 조회할 개인(신용)정보의 내용</h6>
+          <p>
+            - 신용정보집중기관 및 보험요율산출기관에서 수집ㆍ관리하는 정보(피보험자의 질병 및 상해에 관한 정보, 보험계약정보, 보험금지급정보, 교통법규위반 개인정보), 군 운전경력정보(당사의 요청에 따라 보험요율산출기관이 행정정보 공동이용센터를 통해 병무청으로부터 제공받은 정보. 단, 요율산출에 필요한 경우에 한함)<br>
+            -손해보험협회에서 수집ㆍ관리하는 전문보험계약자(보험설계사ㆍ보험대리점ㆍ보험중개사 등)의 정보
+            
+          
+          </p>
+          <h6>3. 조회동의 유효 기간 및 조회자 (개인(신용)정보를 제공받 은 자)의 보유 · 이용 기간</h6>
+          
+          <p>동의일로부터 보험계약의 청약시까지(최대 1년)</p>
+          <p> *보험 가입을 위해, 보험계약 설계를 진행해 주셔야 운행이 가능하오니, 개인정보 수집, 이용에관한 사항에 동의해 주셔야합니다.</p>
+              <p> *보험 설계 동의하지 않으실 경우, 운행이 불가하며, 한번 심사가 완료된 이후 담보의 변경, 차량의 변경을 원하실 경우는 가입동의, 심사부터 다시 진행하셔야 합니다.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- detailModal3 -->
+<div class="modal fade" id="detailModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">개인(신용)정보의 제공에 관한사항</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div >
+
+          <h4>개인(신용)정보의 제공에 관한사항</h4>
+          
+          
+          <p >
+            <!-- - 귀하의 개인 개인정보는 제 3자 제공 동의를한 경우 「개인정보보호법」 및 「위치정보의 보호 및 이용에 관한 법률」에 따라 보험설계 및 사고접수 및 처리를 위하여 귀하의 개인(위치)정보를 다음과 같이 제3자에게 제공하고자 합니다. <br>
+            - 귀하는 (주)SIMG 보험가입 설계시에 입력한 귀하의 개인정보를 아래와 같이 제 3자에게 제공하는 데 동의 합니다. -->
+            개인(신용)정보의 제공에 관한 사항<br>
+            당사는 「개인정보보호법」 및 「신용정보의 이용 및 보호에 관한 법률」에 따라 귀하의 개인(신용)정보를 다음과 같이 제3자에게 제공하고자 합니다.
+
+          </p>
+          <h6 >1. 개인정보를 제공받는 자</h6>
+            <p>
+              <!-- - 신용정보집중기관 : 한국신용정보원<br> -->
+              <!-- - 공공기관 등 : 금융위원회, 국토해양부, 금융감독원, 보험요율 산출기관 등 공공기관, 법령상 업무 수행기관 (위탁사업자 포함)<br> -->
+              
+              - 기명 피보험자 : 우아한 청년들<br>
+              - 신용정보집중기관 : 한국신용정보원<br>
+              - 공공기관 등 : 금융위원회, 국토해양부, 금융감독원, 보험요율 산출기관, 경찰청 등 공공기관, 법령상 업무 수행기관(위탁사업자 포함), 손해보험협회<br>
+              - 보험회사 등 : 손해보험사, 국내ㆍ국외 재보험사, 공제사업자, 체신관서(우체국보험), 금융거래 관련 계좌개설 금융기관, 금융결제원<br>
+              - 업무수탁자 등 : 당사와 모집위탁계약을 체결한 자 (설계사, 대리점 등), 보험중개사, 계약 체결 및 이행 등에 필요한 업무를 위탁받은 자 (보험사고조사업체, 손해사정업체, 의료기관ㆍ의사, 변호사, 위탁콜센타, 건강보험심사평가원, 자동차보험 진료수가분쟁심의회, 공공기관, SK텔레콤㈜, SK네트웍스㈜ 등)<br>
+            </p>
+          <h6 >2. 개인정보를 제공받는 자의 이용목적</h6>
+            <p>
+              - 신용정보집중기관 : 보험계약 및 보험금지급 관련 정보의 집중관리 및 활용 등 신용정보집중기관의 업무<br>
+              - 공공기관 등 : 보험업법 및 자동차손해배상보장법 등 법령에 따른 업무수행(위탁업무 포함)<br>
+              - 보험회사 등 : 중복보험 확인 및 비례보상, 재보험 가입 및 재보험금 청구, 보험계약 공동인수, 금융거래업무(보험료 및 보험금 등 출ㆍ수납)<br>
+              - 업무수탁자 등 : 본 계약의 체결ㆍ이행관련 위탁업무 수행, 진료비 심사, 의료비 심사 및 자문업무, 구상금분쟁심의업무, 안전운전(UBI)특약 가입대상 확인, 제휴서비스 대상여부 확인
+
+              
+            </p>
+          <h6 >3. 제공할 개인정보의 내용</h6>
+            <p>
+              「개인(신용)정보의 수집ㆍ이용에 관한 사항」의 정보내용, 개인식별정보(성명, 전화번호, 주민등록번호, 외국인등록번호, 전자우편주소, 차량번호)<br>
+              *단, 각 제공받는 자의 이용목적을 위해 필요한 정보에 한함
+            </p>
+          
+            
+          <h6 >4. 제공받는 자의 개인정보 보유·이용기간</h6>
+          <p>
+              <!-- - 제공동의일로부터 보험증권에 기입된 증권의 만료시기까지<br>
+              - 단, 갱신시 보유기간 자동연장 (최대 3년)<br> -->
+              개인(신용)정보를 제공받는 자의 이용목적을 달성할 때까지(최대 거래정료일로부터 5년)
+          </p>
+          <p style="font-weight:bold"> * 개인(신용)정보의 제공 동의 거부 시 보험가입 설계 처리가 제한됩니다. <br>
+              
+              <!-- * <a target="_blank" href="https://baemin.simginsu.net/docs/Commercial-General-Liability_KR.pdf">CGL 보험 약관보기 </a> -->
+          </p>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- detailModal4 -->
+<div class="modal fade" id="detailModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">민감정보 처리 및 제 3자 정보제공에 관한 사항</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div >
+
+          <!-- <h4>민간정보 및 고유식별정보의 처리에 관한 사항</h4> -->
+          
+          <h4 >민감정보 및 고유식별정보의 처리에 관한 사항</h5>
+          <p>당사 및 당사 업무수탁자는「개인정보보호법」및「신용정보의 이용 및 보호에 관한 법률」에 따라 상기의 개인(신용)정보에 대한 개별 동의사항에 대하여 다음과 같이 귀하의 민감정보(질병·상해정보) 및 고유식 별정보(주민등록번호·외국인등록번호)를 처리(수집·이용, 조회, 제공) 하고자 합니다.</p>
+          <h6>1. 질병·상해정보 처리</h6>
+          <h6>2. 주민등록번호, 외국인등록번호 처리</h6>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- detailModal5 -->
+<div class="modal fade" id="detailModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">마케팅 활용 제공동의</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div >
+
+          <div >
+
+            <!-- <h4>민간정보 및 고유식별정보의 처리에 관한 사항</h4> -->
+            
+            <!-- <h4>마케팅 및 광고 활용에 관한 사항</h5> -->
+            
+            <h6>1. 마케팅 활용에대한 목적</h6>
+            
+            <p>
+              프로미카 플렉스 자동차보험은 피보험 자동차의 대인I을 보장하는 책임보험가입이 필수사항입니다. 보험사는 이를확인하기위하여 가입자에게 유선안내를 통한 책임보험가입안내를 제공할 수 있습니다. <br>
+              이에대한 가입자의 마케팅 활용제공동의가 필요합니다.<br>
+              마케팅활용제공동의는 자동차보험 가입여부, 자동차보험의 만기정보 조회를 통하여 프로미카 플렉스 보험가입이 제한될 경우 자동차보험가입 안내를 제공하는 목적으로 활용됩니다.<br>
+              (SIMG 고객센터 1877-3006 통한 동의철회가능) 
+            </p>
+              
+            <h6>2. 수집 및 활용 관련 정보</h6>
+            <p>
+              SIMG는 보험심사에서 보다 다양한 정보를 제공하고, 서비스의 질을 향상시키기 위하여 당사의 비즈니스 파트너에게 본 활용동의서에 동의한 회원의
+              개인정보를 제공합니다.<br>
+              제공된 정보는 명시된 이용목적을 벗어나 이용되지 않습니다.<br>
+              개인정보보호관련 법률에 의거 보험가입 심사에 활용한 정보는 안전하게 관리되며, 개인정보의 유출 등 사고가 일어나지 않도록 더욱 철저한 보안이 이루어지도록 노력하고
+              있습니다.
+            </p>
+            <h6>3. 개인정보관련 의견수렴 및 불만처리에 관한 사항</h4>
+            <ul>
+              <li>회사는 가입신청자와의 원활환 의사소통을 위해 민원처리센터를 운영하고 있으며 연락처는 다음과 같습니다.</li>
+              <li><b>[민원처리센터]</b></li>
+              <li>-<span style="padding-left:7px;"></span> 이메일 : jt@simg.kr</li>
+              <li>-<span style="padding-left:7px;"></span> 전화번호 : 1877-3006</li>
+              <li>-<span style="padding-left:7px;"></span> 팩스번호 : 02-6442-6419</li>
+              <li>-<span style="padding-left:7px;"></span> 주 소 : 서울특별시 서초구 논현로 173, 2층 (제이빌딩)</li>
+            </ul>
+            <strong>본 동의문에는 전화, 문자, 이메일 등을 활용한 정보 수신 동의 내용이 포함되어 있습니다.</strong><br>
+          </div>
+
+          
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- datepicker -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!-- datepicker -->
+    <script src="./js/main.js"></script>
+    <script src="./js/agree.js"></script>
+    <script src="./js/submit.js"></script>
+    <script src="./js/premium.js"></script>
+    <script src="../js/juminCheck.js"></script>
+
+  </body>
+</html>
