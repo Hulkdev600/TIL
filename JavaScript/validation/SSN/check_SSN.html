@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    
+    <input type="text" id="SSN">
+
+
+
+    <script>
+
+       
+
+        $('#SSN').blur(function(){
+            var SSNFront = $('#SSN').val().substr(0,6);
+            var SSNBack = $('#SSN').val().substr(6,7);
+            var SSN = SSNFront + SSNBack
+            console.log('주민 앞 :', SSNFront);
+            console.log('주민 뒤 :', SSNBack);
+            console.log('주민번호 :',SSN)
+            
+            checkSSN(SSN);
+            console.log(checkSSN(SSN));
+
+            if(checkSSN(SSN)){
+                alert('주민번호 확인');
+            }else{
+                alert('주민번호를 다시 확인하십시요.')
+                $('#SSN').focus();
+            }
+
+
+        })
+
+
+        //SSN이 950205일 때
+        function checkSSN(SSN){
+            // console.log(SSN);
+
+            var sum = 0;
+            var month = SSN.substr(2,2);
+            var date = SSN.substr(4,2);
+            console.log('월 : ',month)
+            console.log('일: ',date)
+
+            if(SSN.length !== 13){
+                console.log('13자리가 아닙니다');
+                return false
+            }
+
+            if(month < 13 && month !== 0 && date !==0){
+
+                if(month == 2){
+                    if( date > 29 ){
+                        console.log('2월달의 일이 29보다 크다')
+                        return false 
+                    } 
+                } else if(month == 4 || month == 6 || month == 9 || month == 11){
+
+                    if(date > 30) return false;
+
+                } else {
+
+                   if(date > 31) return false;
+
+                }
+                                    
+            
+            } else {
+                //월부터 잘못적혔을 경우
+                return false
+
+            }
+
+            for(var i = 0; i < 12; i++ ){
+
+                sum += Number(SSN.substr(i, 1)) * ((i % 8) + 2); 
+
+            }
+            console.log('sum',sum)
+
+            if(SSN.substr(6,1) == 1 || SSN.substr(6,1) == 2 || SSN.substr(6,1) == 3 || SSN.substr(6,1) == 4 || SSN.substr(6,1) == 9 || SSN.substr(6,1) == 0){
+                //내국인 주민번호 검증                
+                if( ((11 - (sum % 11)) % 10) == Number(SSN.substr(12,1))){
+                    return true
+                }
+
+                return false;
+            
+            } else if(SSN.substr(6,1) == 5 || SSN.substr(6,1) == 6 || SSN.substr(6,1) == 7 || SSN.substr(6,1) == 8 ){
+                //외국인 주민번호 검증()
+
+                if(Number(SSN.substr(8,1)) % 2 !== 0){
+                    
+                    return false;
+
+                }
+
+                if((((11 - (sum % 11)) % 10 + 2) % 10) == Number(ssn.substr(12, 1))){
+
+                    return true;
+
+                }
+
+                return false
+
+
+            }
+
+            return true; 
+        }
+    </script>
+
+</body>
+</html>
