@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #ddd;
+        }
+        .first, .second{
+            margin: 20px; border:1px solid #999; padding: 20px;
+        }
+
+        .parent{
+            overflow:hidden;
+            background-color: white;
+            width: 960px;
+            margin: 50px auto;
+            font-size: 20px;
+            font-family: 'arial';
+            line-height: 1em;
+        }
+        .first{
+            font-size: 30px;
+        }
+        .second{
+            font-size: 40px;
+        }
+
+        .description-container{
+            border: 1px solid;
+            width: 960px;
+            margin: 50px auto;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="parent">
+        <div class="first">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint fugit aspernatur officia soluta! Dignissimos quae iusto natus alias inventore perspiciatis rerum quas! Aspernatur sapiente vero sit quasi praesentium distinctio amet.
+        </div>
+        <div class="second">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cumque sed maiores qui pariatur accusantium aliquam alias! Quis, optio iure asperiores ullam magni dolorem culpa suscipit, non omnis fugit eos.
+        </div>
+    </div>
+
+
+    <div class="description-container">
+        <div class="title">
+            <h1>설명</h1>
+        </div>
+        <div class="description">
+
+            부모에게 line-height : 1을 주게되면 자식인 first와 second가 가지고 있는 font-size만큼 line-height가 자동으로 설정이 되게된다(부모의 line-height :1 상속받음) <br><br>
+
+            그런데 parent에게 line-height를 1이 아닌 1em을 주게되면 그 해당요소의 폰트사이즈(font-size : 20px)에 비례하기 떄문에 자식들의 line-height 역시 20px이 된다.  <br><br>
+        
+            line-height는 대부분의 경우 em없이(단위없이) 하자
+        </div>
+    </div>
+    
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nisi molestiae nemo iure similique! Cumque aut, minus debitis ipsa officia ipsam. Ducimus placeat veritatis, unde eligendi ullam quaerat temporibus illum!
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt qui nulla unde laborum esse impedit minima recusandae numquam quisquam quidem placeat, accusantium ex aut. Repudiandae non sunt dolorem blanditiis officiis.
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, ex! Dolor unde laudantium, ex placeat, corporis dolorem omnis cum, excepturi neque magnam reprehenderit ad! Laborum libero nulla quam sapiente ipsum!
+
+</body>
+</html>
