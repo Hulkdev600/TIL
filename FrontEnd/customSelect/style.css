@@ -1,0 +1,70 @@
+/* select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    background-color: #ffffff;
+    border-radius: 4px;
+    width: 300px;
+}
+select:focus {
+    border-color: 2px solid dodgerblue;
+    outline: none;
+} */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #348e60 ;
+    color: #fff;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0!important;
+    background: #5c6664;
+    /* background-image: none; */
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* IE 10, 11의 네이티브 화살표 숨기기 */
+select::-ms-expand {
+    display:none
+}
+
+.select-area{
+    position: relative;
+    display: flex;
+    width: 20em; 
+    height: 3em;
+    line-height: 3;
+    background: #5c6664;
+    overflow: hidden;
+    border-radius: .25em;
+}
+
+.select-area::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #000;
+    pointer-events:none;
+    transition: .25s all ease;
+}
+.select-area:hover::after{
+    color: #23b499;
+}
+ 

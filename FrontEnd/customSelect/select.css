@@ -1,0 +1,62 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #23b499;
+    color: #fff;
+}
+
+/*outline은 border바깥에 있는 선이고 레이아웃에 관여하지 않는 선이다.*/
+select {
+    appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    -mos-appearance: none;
+    /* outline-color: red; */
+    outline: 0;
+
+    box-shadow: none;
+    border: 0!important;
+    background: #5c6664;
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select-container{
+    /* border: 1px solid; */
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #5c6664;
+    overflow: hidden;
+    border-radius:  .25em;
+}
+
+.select-container::after {
+    background:#252525;
+    /* content:'\25BC'; */
+    content:'click';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease ;
+    
+}
+.select-container:hover::after {
+    color : #23b499;
+}
