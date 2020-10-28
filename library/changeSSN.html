@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="ssn" oninput="changeFormat(this)">
+
+    <h2>에스타르크처리</h2> 
+    <div id="insertText"></div> <BR></BR>
+
+    <H2>원본주민</H2>
+    <div id="realSSN"></div>
+
+    <script>
+
+        String.prototype.replaceAt = function(index,character){
+            return this.substr(0, index) + character + this.substr(index+character.length);
+        }
+
+        var myName = 'jeonghoon';
+        var test = myName.substr(0,4);
+        var test2 = myName.substr(4,3)
+        console.log(myName)
+        console.log(test)
+        console.log(test2)
+        var realSSN='';
+
+        var replaceAtTest = myName.replaceAt(5,'?');
+        console.log(replaceAtTest);
+
+
+
+        function changeFormat(object){
+            
+            estarc(object);
+           
+        }
+
+        function estarc(object){
+            var value = object.value;
+
+            lastStr = value.substr(value.length-1);
+            console.log('lastStr : ',lastStr);
+            console.log('길이',value.length);
+
+            if(value.length > realSSN.length){
+                realSSN +=lastStr;
+
+                console.log(value.length)
+                if(value.length>6){
+                    // value = value + lastStr;
+                    value = value.replaceAt(value.length-1,'*');
+                    setTimeout(() => {
+                        document.getElementById('ssn').value = value;    
+                    }, 30);
+
+                    
+                }
+
+            }else{
+                
+                realSSN = realSSN.substr(0,realSSN.length-1);
+            }
+
+            console.log('realSSN : ',realSSN);
+            console.log('입력값 : ',value);
+
+            document.getElementById('insertText').innerHTML=value;
+            document.getElementById('realSSN').innerHTML=realSSN;
+        }
+    </script>
+</body>
+</html>

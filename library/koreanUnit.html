@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="test">정훈테스트</button>
+
+    <input type="text" class="" onkeyup="changeKorean(this)">
+    <div class="changeKorean"></div>
+
+    <script type="text/javascript">
+
+        var arrNumberWord = ["","일","이","삼","사","오","육","칠","팔","구"];
+        var arrDigitWord = ["","십","백","천"];
+        var arrManWord = ["","만","억","조","경"]; 
+
+        function changeKorean(element){
+
+            var inputValue = element.value;
+
+            var han_value = "";
+            var man_count = 0;
+
+            if(isNaN(element.value) ==true) return
+            // if(isNaN(element.value)){
+
+            //     return 
+            // }
+
+
+            for(let i = 0; i<inputValue.length; i++){
+                console.log(arrNumberWord[inputValue.charAt(i)]);
+
+                var strTextWord = arrNumberWord[inputValue.charAt(i)];
+
+
+                if(strTextWord != ""){
+                    
+                }
+
+
+
+
+            }
+
+            
+
+            
+        }
+
+    //     function fn_change_hangul_money(txt_id)
+    //   {
+    //         console.log('1')
+    //         var num_value = txt_id.value;
+    //         var num_length = num_value.length;
+
+ 
+
+    //         if(isNaN(num_value) == true)
+    //               return;
+
+    //               console.log('2')
+ 
+
+    //         var han_value = "";
+    //         var man_count = 0;      // 만단위 0이 아닌 금액 카운트.
+
+ 
+
+    //         for(i=0; i < num_value.length; i++)
+    //         {
+    //               // 1단위의 문자로 표시.. (0은 제외)
+    //               var strTextWord = arrNumberWord[num_value.charAt(i)];
+
+ 
+
+    //               // 0이 아닌경우만, 십/백/천 표시
+    //               if(strTextWord != "")
+    //               {
+    //                     man_count++;
+    //                     strTextWord += arrDigitWord[(num_length - (i+1)) % 4];
+    //               }
+
+ 
+
+    //               // 만단위마다 표시 (0인경우에도 만단위는 표시한다)
+    //               if(man_count != 0 && (num_length - (i+1)) % 4 == 0)
+    //               {
+    //                     man_count = 0;
+    //                     strTextWord = strTextWord + arrManWord[(num_length - (i+1)) / 4];
+    //               }
+
+ 
+
+    //               han_value += strTextWord;
+    //         }
+    //         console.log('3')
+
+    //         if(num_value != 0)
+    //               han_value = "" + han_value + "명";
+
+ 
+    //         console.log(document.getElementsByClassName("changeKorean"))
+    //         document.getElementsByClassName("changeKorean").innerText = han_value;
+    //   }
+    </script>
+</body>
+</html>
