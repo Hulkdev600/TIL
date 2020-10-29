@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <input type="text" id="ssn" oninput="changeFormat(this)">
+    <input type="text" id="ssn" maxlength="13" oninput="changeFormat(this)">
 
     <h2>에스타르크처리</h2> 
     <div id="insertText"></div> <BR></BR>
@@ -15,7 +15,23 @@
     <H2>원본주민</H2>
     <div id="realSSN"></div>
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+        $('#ssn').blur(function(){
+            console.log('bulr');
+            if(realSSN.length == 13){
+                realSSN = realSSN.substr(0,6)+'-'+realSSN.substr(6)
+            }
+            console.log(realSSN);
+        })
+        $('#ssn').click(function(){
+            if(realSSN.substr(6,1)=='-'){
+                realSSN = realSSN.substr(0,6)+realSSN.substr(7)
+            }
+            console.log(realSSN)
+        })
+
 
         String.prototype.replaceAt = function(index,character){
             return this.substr(0, index) + character + this.substr(index+character.length);
@@ -44,6 +60,7 @@
             var value = object.value;
 
             lastStr = value.substr(value.length-1);
+         
             console.log('lastStr : ',lastStr);
             console.log('길이',value.length);
 
@@ -62,8 +79,11 @@
                 }
 
             }else{
-                
-                realSSN = realSSN.substr(0,realSSN.length-1);
+                if(realSSN.includes('-')){
+                    realSSN.split('-').join();
+                    console.log(realSSN);
+                }
+                realSSN = realSSN.substr(0,value.length);
             }
 
             console.log('realSSN : ',realSSN);
