@@ -27,7 +27,7 @@
             신청자명
           </th>
           <td>
-            <input type="text" class="text">
+            <input type="text" class="text" id="client_name">
           </td>
         </tr>
         <tr>
@@ -35,7 +35,7 @@
             사업자명
           </th>
           <td>
-            <input type="text" class="text">
+            <input type="text" class="text" id="company">
           </td>
         </tr>
 
@@ -44,11 +44,11 @@
             사업자번호
           </th>
           <td>
-            <input type="text" class="text">
+            <input type="text" class="text" id="biz_NO1">
             -
-            <input type="text" class="text">
+            <input type="text" class="text" id="biz_NO2">
             -
-            <input type="text" class="text">
+            <input type="text" class="text" id="biz_NO3">
           </td>
         </tr>
 
@@ -75,6 +75,7 @@
                     <ul>
                       <li>선택</li>
                       <li>010</li>
+                      <li>011</li>
                       <li>016</li>
                       <li>017</li>
                       <li>018</li>
@@ -83,13 +84,35 @@
                     </ul>
                   </div>
                   -
-                  <input type="text" class="text" name="memPhn_NO2" maxlength="4">
+                  <input type="text" class="text" name="memPhn_NO2" maxlength="4" id="memPhn_NO2">
                   -
-                  <input type="text" class="text" name="memPhn_NO3" maxlength="4">
+                  <input type="text" class="text" name="memPhn_NO3" maxlength="4" id="memPhn_NO3">
                 </div>
               </div>
               <h4>일반전화 번호</h4>
-              
+              <div class="normalPhn_info">
+                <select name="normalPhn_NO1" id="normalPhn_NO1">
+                  <option value="">선택</option>
+                  <option value="">02</option>
+                  <option value="">031</option>
+                  <option value="">041</option>
+                </select>
+                <div class="selectbox_wrap">
+                  <input type="button" class="value_holder" value="선택">
+                  <div class="new_selectbox">
+                    <ul>
+                      <li>선택</li>
+                      <li>02</li>
+                      <li>031</li>
+                      <li>041</li>
+                    </ul>
+                  </div>
+                  -
+                  <input type="text" class="text" name="normalPhn_NO2" maxlength="4" id="normalPhn_NO2">
+                  -
+                  <input type="text" class="text" name="normalPhn_NO3" maxlength="4" id="normalPhn_NO3">
+                </div>
+              </div>
             </div>
           </td>
         </tr>
@@ -100,7 +123,7 @@
               <input type="text" class="text">
               @
               <span>
-                <input type="text" class="text">
+                <input type="text" class="text" id="emailAddr_write">
               </span>
               
               <select name="emailAddr" id="emailAddr">

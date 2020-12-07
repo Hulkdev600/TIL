@@ -25,7 +25,24 @@ input.text{
 }
 
 
+
 table.member_tbl{
+    #client_name,
+    #company{
+        width: 270px;
+    }
+    #biz_NO1{
+        width: 83px;
+    }
+    #biz_NO2{
+        width: 100px;
+
+    }
+    #biz_NO3{
+        width: 100px;
+    }
+
+    
 
     th{
         padding: 15px 20px 15px 0;
@@ -64,6 +81,10 @@ table.member_tbl{
             cursor: pointer;
             width: 83px;
         }
+        .value_holder:hover{
+            background: #fff;
+            border: 1px solid #759df5;
+        }
     }
     div.new_selectbox{
         position: absolute;
@@ -94,13 +115,19 @@ table.member_tbl{
             background: #eff5ff;
             color: #396ae5;
         }
+        li.selected{
+            background: #eff5ff;
+            color: #396ae5;
+        }
     }
     
     #memPhn_NO1{
         display: none;
     }
+    #normalPhn_NO1{
+        display: none;
+    }
     
-       
     
 }
 
@@ -128,6 +155,10 @@ table.member_tbl{
             text-align: left;
             cursor: pointer;
             width: 128px;
+        }
+        .value_holder:hover{
+            background: #fff;
+            border: 1px solid #759df5;
         }
     }
     div.new_selectbox{

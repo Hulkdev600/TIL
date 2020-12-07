@@ -32,6 +32,23 @@ input.text {
   border-bottom: 1px solid black;
 }
 
+table.member_tbl #client_name,
+table.member_tbl #company {
+  width: 270px;
+}
+
+table.member_tbl #biz_NO1 {
+  width: 83px;
+}
+
+table.member_tbl #biz_NO2 {
+  width: 100px;
+}
+
+table.member_tbl #biz_NO3 {
+  width: 100px;
+}
+
 table.member_tbl th {
   padding: 15px 20px 15px 0;
   border-top: 1px solid #eeeef0;
@@ -69,6 +86,11 @@ table.member_tbl td {
   width: 83px;
 }
 
+.phn_box div.selectbox_wrap .value_holder:hover {
+  background: #fff;
+  border: 1px solid #759df5;
+}
+
 .phn_box div.new_selectbox {
   position: absolute;
   left: 0;
@@ -100,7 +122,16 @@ table.member_tbl td {
   color: #396ae5;
 }
 
+.phn_box div.new_selectbox li.selected {
+  background: #eff5ff;
+  color: #396ae5;
+}
+
 .phn_box #memPhn_NO1 {
+  display: none;
+}
+
+.phn_box #normalPhn_NO1 {
   display: none;
 }
 
@@ -127,6 +158,11 @@ table.member_tbl td {
   text-align: left;
   cursor: pointer;
   width: 128px;
+}
+
+.email_info div.selectbox_wrap .value_holder:hover {
+  background: #fff;
+  border: 1px solid #759df5;
 }
 
 .email_info div.new_selectbox {
