@@ -57,11 +57,18 @@ table.member_tbl{
         padding: 7px 0 7px 15px;
         border-top: 1px solid #eeeef0;
         color: #333;
+        background: #f7f7f7;
+
     }
 } 
 
 
 .phn_box{
+    h4.phn_title{
+        margin: 12px 0 7px;
+        font-size: 14px;
+    }
+
     div.selectbox_wrap{
         position: relative;
         display: inline-block;
@@ -96,6 +103,7 @@ table.member_tbl{
         zoom: 1;
         width: 83px;
         display: none;
+        z-index: 1;
 
         li{
             position: relative;
@@ -192,5 +200,6 @@ table.member_tbl{
         }
     }
 }
+
 
 

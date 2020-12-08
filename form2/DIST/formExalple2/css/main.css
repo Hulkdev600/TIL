@@ -1,0 +1,62 @@
+/*!
+ * Start Bootstrap - Freelancer v5.1.3 (https://startbootstrap.com/template-overviews/freelancer)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
+ */
+
+.container {
+  width: 50%;
+  border: 1px solid #dbdbdb;
+  padding: 20px;
+}
+
+.container .mem_info_title,
+.container .dambo_info_title,
+.container .agree-title {
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.container .dambo_info_title {
+  margin-top: 20px;
+}
+
+.container .label {
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.container #email_NO1::-webkit-input-placeholder {
+  text-align: right;
+}
+
+.container #email_NO1::-moz-placeholder {
+  text-align: right;
+}
+
+.container #email_NO1:-ms-input-placeholder {
+  text-align: right;
+}
+
+.container #email_NO1::-ms-input-placeholder {
+  text-align: right;
+}
+
+.container #email_NO1::placeholder {
+  text-align: right;
+}
+
+.container input {
+  font-size: 14px;
+}
+
+.container select {
+  font-size: 12px;
+}
+
+.container .label_value {
+  font-size: 14px;
+}

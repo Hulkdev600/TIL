@@ -1,0 +1,52 @@
+.bosang{
+    font-size: 20px;
+}
+.bosang .all_bosang input[type="checkbox"] {
+    display: none;
+}
+.bosang .all_bosang input[type="checkbox"] + label {
+    display: inline-block; width:40px; height: 40px; 
+    cursor:pointer; border-radius: 3px; float:right;
+    background: url(../img/simg/unchecked.png) no-repeat center/35px 35px; cursor:pointer; border-radius: 3px; float:right;
+}
+.bosang .all_covereage:after {
+    display:block; clear:both; content:"";
+}
+
+.bosang .all_bosang input[type="checkbox"]:checked + label {
+    background:url(../img/simg/checked.png) no-repeat center/35px 35px; float:right
+}
+
+.bosang {
+    position:relative;
+}
+.bosang .all_bosang input[type="checkbox"] + label span{
+    position: absolute; top: 0; left: 0px; display:block; 
+}
+
+.bosang ul{
+    margin-top: 15px;
+}
+.bosang ul li{
+    margin-bottom: 30px;
+}
+.bosang ul li:after{
+    display:block; clear:both; content:""
+}
+.bosang ul input[type="checkbox"]{
+    display:none;
+}
+.bosang ul input[type="checkbox"] + label {
+    width:40px; height: 40px; cursor:pointer; border-radius: 3px;float:right;
+    background:url(../img/simg/unchecked.png) no-repeat center/35px 35px; float: right;
+}
+.bosang ul li input[type="checkbox"]:checked + label {
+    background:url(../img/simg/checked.png) no-repeat center/35px 35px; float: right;
+}
+.bosang ul li input[type="checkbox"] + label span {
+    position:absolute; left:0px; display: block;
+}
+.bosangSelect{
+    font-size: 1.7rem; margin-top: 1.7rem; margin-bottom: 3rem; font-weight: 400;
+
+}

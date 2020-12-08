@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  
+ <div class="container">
+
+  <h4 class="mem_info_title">기초정보 입력</h4>
+  <div class="mb-3">
+    <label for="client_name" class="form-label label">신청자명</label>
+    <input type="text" class="form-control" id="client_name" placeholder="신청자명"> 
+  </div>
+
+  <div class="mb-3">
+    <label for="biz_name" class="form-label label">사업자명</label>
+    <input type="text" class="form-control" id="biz_name" placeholder="사업자명">
+  </div>
+
+  <div class="mb-3">
+    <div class="row">
+      <label class="form-label label">사업자번호</label>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="3자리"  aria-label="First name">
+      </div>
+      -
+      <div class="col">
+        <input type="text" class="form-control" placeholder="2자리" aria-label="First name">
+      </div>
+      -
+      <div class="col">
+        <input type="text" class="form-control" placeholder="5자리" aria-label="Last name">
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="mb-3">
+    <div class="row">
+      <label class="form-label label">핸드폰</label>
+      <div class="col">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>선택</option>
+          <option value="010">010</option>
+          <option value="011">011</option>
+          <option value="016">016</option>
+          <option value="017">017</option>
+          <option value="018">018</option>
+          <option value="019">019</option>
+        </select>
+      </div>
+      -
+      <div class="col">
+        <input type="text" class="form-control" aria-label="First name">
+      </div>
+      -
+      <div class="col">
+        <input type="text" class="form-control" aria-label="Last name">
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <div class="row">
+      <label class="form-label label">일반전화</label>
+      <div class="col">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>선택</option>
+          <option value="02">02</option>
+          <option value="031">031</option>
+          <option value="041">041</option>
+        </select>
+      </div>
+      -
+      <div class="col">
+        <input type="text" class="form-control" aria-label="First name">
+      </div>
+      -
+      <div class="col">
+        <input type="text" class="form-control" aria-label="Last name">
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="mb-3">
+    <label class="form-label label">이메일</label>
+
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" aria-label="Username">
+      <span class="input-group-text">@</span>
+      <input type="text" class="form-control" aria-label="Server">
+    </div>
+  </div>
+
+  <h4 class="dambo_info_title">필요정보 입력</h4>
+  <div class="mb-3">
+    <label for="service" class="form-label label">업종</label>
+    <input type="text" class="form-control" id="service" placeholder="">
+  </div>
+  
+  <div class="mb-3">
+    <label for="addr" class="form-label label">주소</label>
+    <input type="text" class="form-control" id="addr">
+  </div>
+
+<!-- 
+  <div class="mb-3">
+    <label for="" class="form-label label">건물의 구조</label>
+    <select class="form-select" aria-label="Default select example">
+      <option selected>선택</option>
+      <option value="010">철근콘코리트조 슬라브 건물</option>
+      <option value="011">철골조 판넬 지붕</option>
+      <option value="016">기타</option>
+    </select>
+  </div> -->
+
+
+  <!-- <div class="mb-3">
+    <label for="" class="form-label label">건물_최대보상금액 설정</label>
+    <select class="form-select" aria-label="Default select example">
+      <option selected>선택</option>
+      <option value="010">3천만원</option>
+      <option value="011">5천만원</option>
+      <option value="016">1억원</option>
+      <option value="016">가입안함</option>
+    </select>
+  </div> -->
+
+  <div class="mb-3">
+    <div>
+      <label for="" class="form-label label">건물의 구조</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="goojo" id="goojo1" value="1">
+      <label class="form-check-label label_value" for="goojo1">철근콘크리트조 슬라브 건물</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="goojo" id="goojo2" value="2">
+      <label class="form-check-label label_value" for="goojo2">철골조 판넬 지붕</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="goojo" id="goojo3" value="99">
+      <label class="form-check-label label_value" for="goojo3">기타</label>
+    </div>
+  </div>
+
+  
+  <div class="mb-3">
+    <div>
+      <label for="" class="form-label label">건물 최대 보상 금액 설정</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="gunbool_dambo" id="gunmool_dambo1" value="1">
+      <label class="form-check-label label_value" for="gunmool_dambo1">3천만원</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="gunbool_dambo" id="gunmool_dambo2" value="2">
+      <label class="form-check-label label_value" for="gunmool_dambo2">5천만원</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="gunbool_dambo" id="gunmool_dambo3" value="3">
+      <label class="form-check-label label_value" for="gunmool_dambo3">1억원</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="gunbool_dambo" id="gunmool_dambo4" value="99">
+      <label class="form-check-label label_value" for="gunmool_dambo4">가입안함</label>
+    </div>
+  </div>
+
+  <!-- <div class="mb-3">
+    <label for="" class="form-label label">시설(냉난방시설 및 조리시설 포함) 최대 보상금액</label>
+    <select class="form-select" aria-label="Default select example">
+      <option selected>선택</option>
+      <option value="">3천만원</option>
+      <option value="">5천만원</option>
+      <option value="">가입안함</option>
+    </select>
+  </div> -->
+
+  <div class="mb-3">
+    <div>
+      <label for="" class="form-label label">시설(냉난방시설 및 조리시설 포함) 최대 보상금액</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="sisul_dambo" id="sisul_dambo1" value="1">
+      <label class="form-check-label label_value" for="sisul_dambo1">3천만원</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="sisul_dambo" id="sisul_dambo2" value="2">
+      <label class="form-check-label label_value" for="sisul_dambo2">5천만원</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="sisul_dambo" id="sisul_dambo3" value="3">
+      <label class="form-check-label label_value" for="sisul_dambo3">1억원</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="sisul_dambo" id="sisul_dambo4" value="99">
+      <label class="form-check-label label_value" for="sisul_dambo4">가입안함</label>
+    </div>
+  </div>
+
+  <!-- <div class="mb-3">
+    <label for="" class="form-label label">재고자산(동산)_최대 보상금액</label>
+    <select class="form-select" aria-label="Default select example">
+      <option selected>선택</option>
+      <option value="1">1천만원</option>
+      <option value="2">2천만원</option>
+      <option value="3">3천만원</option>
+      <option value="4">가입안함</option>
+    </select>
+  </div> -->
+
+  <div class="mb-3">
+    <div>
+      <label for="" class="form-label label">재고자산(동산)_최대 보상금액</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="test" id="test_dambo1" value="1">
+      <label class="form-check-label label_value" for="test_dambo1">1천만원</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="test" id="test_dambo2" value="2">
+      <label class="form-check-label label_value" for="test_dambo2">2천만원</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="test" id="test_dambo3" value="3">
+      <label class="form-check-label label_value" for="test_dambo3">3천만원</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="test" id="test_dambo4" value="99">
+      <label class="form-check-label label_value" for="test_dambo4">가입안함</label>
+    </div>
+  </div>
+  
+      
+  <h4 class="agree-title">개인정보 수집 및 이용 동의</h4>
+ </div>
+
+ 
+    
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

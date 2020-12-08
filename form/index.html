@@ -56,7 +56,7 @@
           <th>연락처</th>
           <td>
             <div class="phn_box">
-              <h4>휴대폰 번호</h4>
+              <h4 class="phn_title">휴대폰 번호</h4>
               <div class="cell_info">
                 <select name="memPhn_NO1" id="memPhn_NO1">
                   <option>선택</option>
@@ -89,7 +89,7 @@
                   <input type="text" class="text" name="memPhn_NO3" maxlength="4" id="memPhn_NO3">
                 </div>
               </div>
-              <h4>일반전화 번호</h4>
+              <h4 class="phn_title">일반전화 번호</h4>
               <div class="normalPhn_info">
                 <select name="normalPhn_NO1" id="normalPhn_NO1">
                   <option value="">선택</option>
@@ -157,8 +157,54 @@
     </table>
 
 
-    <h3 class="register_title">담보 선택</h3>
+    <h3 class="register_title">(타이틀)</h3>
     
+    <div class="contents_area">
+      <div class="label_box">
+        <label for="service">업종</label>
+      </div>
+      <input type="text" class="text" id="service">
+    </div>
+    <div class="contents_area">
+      <div class="label_box">
+        <label for="goozo">건물의 구조</label>
+      </div>
+      <select name="" id="goozo">
+        <option value="">철근콘크리트 슬라브 건물</option>
+        <option value="">철골조 판넬지붕</option>
+        <option value="">기타</option>
+      </select>
+    </div>
+    <div class="contents_area">
+      <div class="label_box">
+        <label for="">시설 최대 보상금액</label>
+      </div>
+      <select name="" id="">
+        <option value="">3천만원</option>
+        <option value="">5천만원</option>
+        <option value="">1억원</option>
+        <option value="">가입안함</option>
+      </select>
+    </div>
+    <div class="contents_area">
+      <div class="label_box">
+        <label for="">재고자산_최대보상금액</label>
+      </div>
+      <select name="" id="">
+        <option value="">1천만원</option>
+        <option value="">2천만원</option>
+        <option value="">3천만원</option>
+        <option value="">가입안함</option>
+      </select>
+    </div>
+
+    
+    
+
+
+    <input type="button" id="value_check" value="체크" style="display: block; margin-top: 200px;">
+
+
 
 
 
@@ -167,6 +213,6 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 </html>

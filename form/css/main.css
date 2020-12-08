@@ -63,6 +63,12 @@ table.member_tbl td {
   padding: 7px 0 7px 15px;
   border-top: 1px solid #eeeef0;
   color: #333;
+  background: #f7f7f7;
+}
+
+.phn_box h4.phn_title {
+  margin: 12px 0 7px;
+  font-size: 14px;
 }
 
 .phn_box div.selectbox_wrap {
@@ -101,6 +107,7 @@ table.member_tbl td {
   zoom: 1;
   width: 83px;
   display: none;
+  z-index: 1;
 }
 
 .phn_box div.new_selectbox li {

@@ -1,0 +1,41 @@
+.container{
+    width: 50%;
+    border: 1px solid #dbdbdb;
+    padding: 20px ;
+
+
+
+
+
+    .mem_info_title,
+    .dambo_info_title,
+    .agree-title{
+        border-bottom: 1px solid black;
+        padding-bottom: 10px;;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .dambo_info_title{
+        margin-top: 20px;
+    }
+    .label{
+        font-weight: 800;
+        font-size: 14px;
+    }
+    #email_NO1::placeholder{
+        text-align: right;
+    }
+
+    input{
+        font-size: 14px;
+    }
+    select{
+        font-size: 12px;
+    }
+    .label_value{
+        font-size: 14px;
+       
+    }
+
+}
