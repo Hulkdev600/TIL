@@ -43,8 +43,36 @@
 
         function changeFormat(object){
             
-            estarc(object);
-           
+            var value = object.value;
+
+            lastStr = value.substr(value.length-1);
+         
+            console.log('lastStr : ',lastStr);
+            console.log('길이',value.length);
+
+            if(value.length > realSSN.length){
+                realSSN +=lastStr;
+
+                console.log(value.length)
+                if(value.length>6){
+                    // value = value + lastStr;
+                    value = value.replaceAt(value.length-1,'*');
+                    setTimeout(() => {
+                        document.getElementById('ssn').value = value;    
+                    }, 1000);
+
+                    
+                }
+
+            }else{
+                if(realSSN.includes('-')){
+                    realSSN.split('-').join();
+                    console.log(realSSN);
+                }
+                realSSN = realSSN.substr(0,value.length);
+            }
+            document.getElementById('insertText').innerHTML=value;
+            document.getElementById('realSSN').innerHTML=realSSN;
         }
 
         function estarc(object){
@@ -80,8 +108,7 @@
             console.log('realSSN : ',realSSN);
             console.log('입력값 : ',value);
 
-            document.getElementById('insertText').innerHTML=value;
-            document.getElementById('realSSN').innerHTML=realSSN;
+           
         }
     </script>
 </body>

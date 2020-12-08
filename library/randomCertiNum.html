@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" onkeyup="random_number(100000,999999)">
+
+
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    <script>
+
+        function random_number(min, max) { // 100000, 999999
+                var mthRN = Math.random(); 
+                var value1 = (max + 1 - min); //100000
+                console.log(mthRN); //난수
+                console.log(value1); // 900000
+                console.log(min);
+
+                var randomCertinum = Math.floor(mthRN * value1 + min); // 900000 * 난수 + 100000
+                console.log(randomCertinum);
+                return randomCertinum;
+            }
+    </script>
+    
+</body>
+</html>

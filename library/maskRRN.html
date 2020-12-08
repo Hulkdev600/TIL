@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="rrn" maxlength="14" oninput="masking(this)" >
+    /<input type="text" id='ssn1'>
+    <input type="text" id="ssn2">
+
+    <h2>에스타르크처리</h2> 
+    <div id="insertText"></div> <BR></BR>
+
+    <H2>원본주민</H2>
+    <div id="RRN"></div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+     String.prototype.replaceAt = function(index,character){
+            return this.substr(0, index) + character + this.substr(index+character.length);
+    }
+
+
+    var RRN='';
+
+    $('#rrn').keypress(function(e){
+        var k = e.which;
+        if (k <= 47 || k >= 58) {
+            e.preventDefault();
+            return false;
+        };
+        console.log()
+    });
+    
+    
+    function masking(object) {
+        var onValue = object.value;
+        var lastChar = onValue[onValue.length-1];
+       
+        
+        if(onValue.length > RRN.length){ 
+            
+            RRN += lastChar;
+            if(onValue.length < 6){
+                $('#rrn').val(onValue);
+            }else if(onValue.length < 13){
+                if(onValue.includes('-')){
+                    $('#rrn').val(onValue);
+                }else{
+                    onValue = onValue + '-';
+                    $('#rrn').val(onValue);
+                }
+                if(onValue.length > 8){
+                    onValue = onValue.replaceAt(onValue.length-2,'*');
+                    $('#rrn').val(onValue);
+                };
+                
+
+            }
+            
+
+            var maskAfterSecond = setTimeout(function(){
+                onValue = onValue.replaceAt(onValue.length-1,'*');
+            })
+            if(onValue.length == 14){
+               maskAfterSecond 
+            }
+        }else{
+            RRN = onValue.substr(0)
+        }
+        console.log(RRN);
+        $('#RRN').html(RRN);
+
+
+    }
+
+   
+               
+    </script>
+</body>
+</html>

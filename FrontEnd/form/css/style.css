@@ -1,0 +1,95 @@
+tr{
+    /*border: 1px solid black;*/
+}
+
+th{
+    margin-right: 20px;
+    text-align: right;
+    padding-right: 30px;
+}
+td{
+
+}
+
+input.text{
+    padding: 7px 10x 6px;
+    border: 1px solid #a3a4a5;
+    border-right: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+div.selectbox-wrap{
+    position: relative;
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+.value-holder{
+    height: 29px;
+    padding: 1px 20px 1px 9px;
+    border: #a3a3a3;
+    border-right: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: left;
+    cursor: pointer;
+    background: url(./img/dropdown_img2.png) 1px no-repeat 100%;
+}
+
+div.new-selectbox{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 28px;
+    background: #fff;
+    width: 83px;
+    border: 1px solid #759df5;
+}
+
+div.new-selectbox li{
+    position: relative;
+    overflow: hidden;
+    height: 25px;
+    padding-left: 9px;
+    cursor: pointer;
+    z-index: 2;
+    border-bottom: 1px solid #d9e5fd;
+    font-weight: bold;
+    font-size: 12px;
+}
+div.new-selectbox li:hover{
+    background: #eff5ff;
+    color: #396ae5;
+}
+
+.selectbox-wrap2{
+    position: relative;
+    display: inline-block;
+}
+div.new-selectbox2{
+    position: absolute;
+    left: 0;
+    top: 28px;
+    overflow: hidden;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #759df5;
+}
+.value-holder2{
+    position: absolute;
+    
+    border: 1px solid #a3a3a3;
+    border-right: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    height: 29px;
+    text-align: left;
+
+
+
+}
