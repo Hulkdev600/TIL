@@ -1,4 +1,1 @@
-# TIL
-
-## Angular
-## NodeJs
+input --> output으로 전환
