@@ -11,7 +11,7 @@
 
 ## 원인
 - pom.xml에서 org.hibernate 모듈 관련된 태그에서 문제가 있다.
-- 기존에 <type>pom<type>이 문제가 되어 주석처리 했더니 위 에러가 사라졌다.
+- 기존에 ```<type>pom<type>```이 문제가 되어 주석처리 했더니 위 에러가 사라졌다.
 ```xml
  <dependency>
             <groupId>org.hibernate</groupId>
@@ -20,6 +20,8 @@
 <!--            <type>pom</type>-->
         </dependency>
 ```
+- type태그가 pom이 열려있으면 persistence.xml 파일의 hibernate.dialect의 value인 'org.hibernate.dialect.H2Dialect가 빨간 글씨 처리가 되면서 H2연결에 문제가 생기는 듯하다.
+
 
 
 
