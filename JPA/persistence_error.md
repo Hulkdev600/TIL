@@ -9,6 +9,18 @@
 
 
 
+## 원인
+- pom.xml에서 org.hibernate 모듈 관련된 태그에서 문제가 있다.
+- 기존에 <type>pom<type>이 문제가 되어 주석처리 했더니 위 에러가 사라졌다.
+```xml
+ <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.1.4.Final</version>
+<!--            <type>pom</type>-->
+        </dependency>
+```
+
 
 
 
