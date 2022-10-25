@@ -75,8 +75,8 @@ module.exports = (req,res, next) => {
 
 
 ``` javascript
-const setGlobalServerModeRouter = require('./routes/setGlobalServerMode')   // 서버점검모드로 QA지원용 라우터 세팅
+const changeServerModeRouter = require('./routes/setGlobalServerMode')   // 서버점검모드로 QA지원용 라우터 세팅
 
-app.use(setGlobalServerModeRouter)
+app.use(changeServerModeRouter)
 // app.js
 ```
