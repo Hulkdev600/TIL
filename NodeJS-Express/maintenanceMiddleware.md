@@ -48,7 +48,8 @@ module.exports = (req,res, next) => {
             if(accessBlock){
 
                 console.log('서버 점검 중')
-
+                
+                // 서버 점검 시 제공 페이지
                 let returnPath = path.resolve('./client/maintenance/index.html')
 
                 return res.sendFile(returnPath);
@@ -66,7 +67,7 @@ module.exports = (req,res, next) => {
     }
 
 
-
+// changeServerMode.js
 }
 
 ```
@@ -77,5 +78,5 @@ module.exports = (req,res, next) => {
 const setGlobalServerModeRouter = require('./routes/setGlobalServerMode')   // 서버점검모드로 QA지원용 라우터 세팅
 
 app.use(setGlobalServerModeRouter)
-
+// app.js
 ```
